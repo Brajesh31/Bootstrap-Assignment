@@ -1,0 +1,17 @@
+# Local editor and operating-system state
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary and local environment files
+*.log
+.env
+.env.*
+!.env.example
+
+# Common local build and dependency directories
+node_modules/
+dist/
+build/
