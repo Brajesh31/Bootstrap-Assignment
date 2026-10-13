@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: >-
+  If you use this project, please cite it using the metadata below.
+title: Bootstrap Assignment
+abstract: >-
+  A static HTML collection demonstrating Bootstrap cards, a carousel,
+  navigation, a dropdown, and a modal dialog.
+authors:
+  - family-names: Kumar
+    given-names: Brajesh
+    alias: brajesh31
+repository-code: 'https://github.com/Brajesh31/Bootstrap-Assignment'
+license: MIT
+type: software
