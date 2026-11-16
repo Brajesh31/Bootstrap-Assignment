@@ -1,75 +1,75 @@
 # 📚 Bootstrap Assignment Documentation Hub
 
-Welcome to the engineering and learning documentation for this repository. It contains three static Bootstrap exercises: a course card, a carousel, and a navigation/dropdown/login-modal layout.
+Welcome to the full documentation for the three Bootstrap 5.3.2 HTML exercises in this repository.
 
 > [!IMPORTANT]
-> This repository is a front-end assignment, not a production course platform. The login modal is only a visual form, the enrollment link is a placeholder, and the navigation links do not connect to working services. No API, database, authentication system, backend, or build pipeline is included.
+> This is a static educational project. It does not include real login, enrollment, accounts, an API, a database, or a backend. The modal and CTA examples are visual demonstrations only.
 
-## 🧭 Recommended reading paths
+## 🧭 Reading paths
 
-- **New learner:** [Project Overview](project-overview.md) → [Exercises](features.md) → [Usage](usage.md) → [Limitations](limitations.md).
-- **Frontend developer:** [Installation](installation.md) → [Project Structure](project-structure.md) → [Architecture](architecture.md) → [Bootstrap Components](components.md) → [Testing](testing.md).
-- **Quality reviewer:** [Accessibility](accessibility.md) → [Security](security.md) → [Performance](performance.md) → [Deployment](deployment.md).
-- **Contributor:** [Development](development.md) → [Coding Standards](coding-standards.md) → [Contribution Guide](../CONTRIBUTING.md).
+- **Learn the project:** [Overview](project-overview.md) → [Features](features.md) → [Usage](usage.md) → [Limitations](limitations.md).
+- **Understand the code:** [Project structure](project-structure.md) → [Architecture](architecture.md) → [Components](components.md) → [Data flow](data-flow.md) → [Diagrams](diagrams/README.md).
+- **Preview and test:** [Installation](installation.md) → [Configuration](configuration.md) → [Testing](testing.md) → [Troubleshooting](troubleshooting.md).
+- **Review quality:** [Accessibility](accessibility.md) → [Responsive design](responsive-design.md) → [Performance](performance.md) → [Security](security.md) → [Privacy](privacy.md).
 
 ## 📖 Documentation catalogue
 
-| Category | Document | Coverage |
-|---|---|---|
-| Product | [Overview](project-overview.md) | Assignment purpose, scope, audience and non-goals |
-| Product | [Features](features.md) | Task 1, Task 2 and Task 3 behavior |
-| Product | [Usage](usage.md) | How to open and interact with the pages |
-| Product | [Limitations](limitations.md) | Placeholder links and missing services |
-| Structure | [Project Structure](project-structure.md) | File tree, assets and output screenshots |
-| Structure | [Assets](assets.md) | Media inventory, dimensions and attribution workflow |
-| Architecture | [Architecture](architecture.md) | Static HTML and CDN model |
-| Architecture | [System Design](system-design.md) | Component boundaries and trust model |
-| Architecture | [Data Flow](data-flow.md) | Browser, Bootstrap and form boundary |
-| Architecture | [Workflow](workflow.md) | Page loading and interaction sequences |
-| UI | [Components](components.md) | Card, carousel, nav, dropdown and modal |
-| UI | [Responsive Design](responsive-design.md) | Viewport behavior and layout review |
-| Setup | [Installation](installation.md) | Direct open and Python static server |
-| Setup | [Configuration](configuration.md) | No build configuration, CDN version and SRI |
-| Development | [Development](development.md) | Editing and review workflow |
-| Development | [Coding Standards](coding-standards.md) | HTML and Bootstrap practices |
-| Quality | [Testing](testing.md) | Manual browser test matrix |
-| Quality | [Accessibility](accessibility.md) | Keyboard, labels, alt text and contrast |
-| Quality | [Performance](performance.md) | Images, CDN and network cost |
-| Quality | [Security](security.md) | Credential and dependency boundaries |
-| Privacy | [Privacy](privacy.md) | No current data collection |
-| Operations | [Deployment](deployment.md) | Static publishing |
-| Operations | [Release Process](release-process.md) | Review checklist |
-| Operations | [Maintenance](maintenance.md) | Routine upkeep |
-| Operations | [Runbooks](runbooks/README.md) | Preview, asset audit and release |
-| Reference | [API](api.md) | Explicit absence of backend endpoints |
-| Reference | [Database](database.md) | No persistence layer |
-| Reference | [FAQ](faq.md) | Common questions |
-| Reference | [Troubleshooting](troubleshooting.md) | CDN, images and Bootstrap interactions |
-| Reference | [Glossary](glossary.md) | Bootstrap and web terminology |
-| Reference | [References](references.md) | Official Bootstrap and web standards |
-| Governance | [ADRs](adr/README.md) | Architecture decisions |
+| Guide | Coverage |
+|---|---|
+| [Project overview](project-overview.md) | Purpose, audience, learning objectives and non-goals |
+| [Features](features.md) | Task 1 card, Task 2 carousel, Task 3 navigation/modal |
+| [Usage](usage.md) | How to interact with each page |
+| [Project structure](project-structure.md) | Directory tree and file responsibilities |
+| [Architecture](architecture.md) | Static HTML, CDN and browser model |
+| [System design](system-design.md) | Component boundaries and trust model |
+| [Components](components.md) | Bootstrap component breakdown |
+| [Modules](modules.md) | File responsibilities |
+| [Data flow](data-flow.md) | Browser assets and temporary UI state |
+| [Diagrams](diagrams/README.md) | Editable Mermaid diagram catalogue |
+| [Installation](installation.md) | Direct open and Python HTTP server |
+| [Configuration](configuration.md) | CDN, SRI and carousel settings |
+| [API](api.md) | Browser component attributes and no server API |
+| [Database](database.md) | No persistence layer |
+| [Development](development.md) | Editing and review process |
+| [Coding standards](coding-standards.md) | HTML, Bootstrap, images and docs conventions |
+| [Testing](testing.md) | Manual test matrix |
+| [Accessibility](accessibility.md) | Keyboard, focus, labels and alt text |
+| [Responsive design](responsive-design.md) | Mobile/tablet/desktop verification |
+| [Performance](performance.md) | CDN, image and layout performance |
+| [Security](security.md) | Login demo and CDN boundaries |
+| [Privacy](privacy.md) | No current application data collection |
+| [Assets](assets.md) | Media inventory, output files and image rights |
+| [Limitations](limitations.md) | Verified missing functionality |
+| [Future scope](future-scope.md) | Prioritized improvements |
+| [Deployment](deployment.md) | Static hosting guidance |
+| [Release process](release-process.md) | Pre-release and rollback checklist |
+| [Maintenance](maintenance.md) | Routine upkeep |
+| [Observability](observability.md) | Static-host monitoring considerations |
+| [FAQ](faq.md) | Common questions |
+| [Troubleshooting](troubleshooting.md) | CDN, paths and component issues |
+| [Glossary](glossary.md) | Technical terminology |
+| [References](references.md) | Official Bootstrap and web references |
+| [ADRs](adr/README.md) | Architecture decision records |
+| [Runbooks](runbooks/README.md) | Local preview, asset verification and publishing |
 
-## 🔎 Source inventory
+## 🔎 Verified source inventory
 
-| Path | Purpose |
+| Source | Purpose |
 |---|---|
 | `Assignment_14_Bootstrap/Task_1.html` | Course card |
-| `Assignment_14_Bootstrap/Task_2.html` | Three-image Bootstrap carousel |
+| `Assignment_14_Bootstrap/Task_2.html` | Three-image carousel |
 | `Assignment_14_Bootstrap/Task_3.html` | Navigation, dropdown and login modal |
-| `Assignment_14_Bootstrap/media/` | Images referenced by the HTML exercises |
-| `Assignment_14_Bootstrap/output/` | Saved example renders, not runtime dependencies |
-| `docs/` | Project documentation |
-| `.github/workflows/update-readme.yml` | Existing README automation, preserved |
+| `Assignment_14_Bootstrap/media/` | Images used by the task pages |
+| `Assignment_14_Bootstrap/output/` | Saved sample renders |
+| `.github/workflows/update-readme.yml` | Existing README automation |
 
-## 🧩 Diagram catalogue
+## 🛠️ Documentation maintenance
 
-Editable Mermaid diagrams live in [diagrams/](diagrams/README.md). They describe the static page architecture, browser loading, task-specific user journeys, carousel state, modal boundary, asset delivery and deployment.
+When task markup, Bootstrap versions, media paths, or interactions change:
+1. Update the relevant page guide.
+2. Update affected Mermaid diagrams.
+3. Recheck SRI values and local asset references.
+4. Run the manual verification matrix.
+5. Keep current functionality separate from proposed future functionality.
 
-## ✅ Documentation maintenance rules
-
-1. Keep file and asset paths aligned with the actual repository tree.
-2. Use accurate descriptions of Bootstrap's actual component behavior.
-3. Keep future backend proposals separate from the current implementation.
-4. Do not publish fabricated screenshots or unverified external demo links.
-5. Check image rights before reuse. The root MIT license does not automatically cover third-party media.
-6. Update diagrams and documentation whenever the HTML or Bootstrap version changes.
+Do not add fake API/database schemas, fabricated test results, or screenshots that were not captured from the actual pages.
