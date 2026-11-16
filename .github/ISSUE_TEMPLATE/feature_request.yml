@@ -1,0 +1,37 @@
+name: "✨ Feature request"
+description: Suggest an improvement to an exercise or learning resource.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem should be solved?
+      description: Explain the student or maintainer need.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Affected area
+      options:
+        - Task 1 - Card
+        - Task 2 - Carousel
+        - Task 3 - Navigation/modal
+        - Accessibility
+        - Responsive design
+        - Documentation
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: considerations
+    attributes:
+      label: Alternatives and considerations
+      description: Consider accessibility, security, media rights, and the static project scope.
