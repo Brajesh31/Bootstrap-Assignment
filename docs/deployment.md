@@ -1,21 +1,47 @@
-# Deployment
+# 🌐 Deployment Guide
 
-## Hosting model
+## 1. Hosting model
 
-The project can be published as static files using any host that serves HTML and image assets. There is no backend process, database, API, build output, or environment configuration.
+This repository is a static collection of HTML pages and image assets. It does not require a backend process, build output, database, package installation, or environment variables.
 
-The repository has no root index.html. Configure the hosting document root to Assignment_14_Bootstrap if you want the three task pages at the site root, or publish the repository and link to the nested files by path. Do not assume a root URL will select a task page automatically.
+The repository root does not contain an `index.html`. The three task pages are under `Assignment_14_Bootstrap/`.
 
-## Publish contents
+## 2. Choose the document root
 
-Include all three Task HTML files and the complete media directory. The output directory contains saved example renders and is not required for the pages to run. Preserve the folder relationship between each page and media/ so image references continue to work.
+**Option A: publish the assignment directory as the site root.** The host document root points to the contents of `Assignment_14_Bootstrap/`. Visitors can open `/Task_1.html`, `/Task_2.html`, and `/Task_3.html`.
 
-No compilation or dependency installation is required. A static host may publish the folder directly. There are no runtime environment variables; .env.example is informational only.
+**Option B: publish the repository root.** The pages remain nested at `/Assignment_14_Bootstrap/Task_1.html`, etc. Configure navigation or a landing page separately if a friendly root URL is needed.
 
-## External dependency and operation
+Do not assume that the host automatically selects one of the task pages.
 
-The HTML requests Bootstrap 5.3.2 CSS and the JavaScript bundle from jsDelivr. The host and users need network access to that CDN for styling and interactive components. If the CDN is blocked, the page will not have its intended Bootstrap appearance or interactions. A local Bootstrap bundle can be considered if reliable offline behavior is required, with integrity and version checks updated accordingly.
+## 3. Files to publish
 
-This repository's login modal is not authentication, and the course action is not enrollment. Do not present the pages as a production login or course registration service. If real credentials or user submissions are ever introduced, that requires a separately designed and secured backend.
+Include all three HTML files and the complete `media/` directory. The `output/` directory contains saved example renders and is useful as reference material, but the pages do not load those images.
 
-Before making the site public, verify that the bundled images may be published and that their third-party rights are documented. The MIT source license does not by itself grant rights to those images.
+Preserve directory layout and filename casing because the HTML uses relative media paths.
+
+## 4. External dependency requirements
+
+Bootstrap 5.3.2 CSS and JavaScript are loaded from jsDelivr. Users need network access to the CDN for full styling and interactive carousel/dropdown/modal functionality.
+
+Verify the version and SRI hashes before deployment. A local Bootstrap distribution is an optional future change, not currently included.
+
+## 5. Production caveat
+
+The login modal and enrollment link are examples only. Do not publish them as working authentication or course enrollment services. A real user system requires a backend, privacy review, security controls, and operational ownership.
+
+## 6. Post-deployment checks
+
+- [ ] All task URLs return the expected HTML.
+- [ ] All local images load.
+- [ ] Bootstrap CDN requests succeed.
+- [ ] Carousel controls work.
+- [ ] Dropdown opens and closes.
+- [ ] Modal opens and closes.
+- [ ] Mobile layout remains usable.
+- [ ] No real credential collection is implied.
+- [ ] Image distribution rights are verified.
+
+## 7. Rollback
+
+Because the site is static, restore the previous known-good deployment artifact or publish the previous reviewed commit. Verify all HTML and media paths after rollback.
