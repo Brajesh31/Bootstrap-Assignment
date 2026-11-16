@@ -1,0 +1,52 @@
+name: 📚 Documentation link checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  local-links:
+    name: Validate local Markdown targets
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check local Markdown targets
+        run: |
+          python3 <<'PY'
+          from pathlib import Path
+          import re
+          import sys
+          import urllib.parse
+
+          roots = [Path("."), Path("docs"), Path("assets"), Path(".github")]
+          files = set()
+          for root in roots:
+              if root.exists():
+                  files.update(p for p in root.rglob("*.md") if ".git" not in p.parts)
+          failures = []
+          pattern = re.compile(r"!?[[^]]*](([^)]+))")
+          for file in sorted(files):
+              content = file.read_text(encoding="utf-8")
+              for match in pattern.finditer(content):
+                  target = match.group(1).strip().split()[0].strip("<>")
+                  if not target or target.startswith("#") or re.match(r"^[a-zA-Z][a-zA-Z0-9+.-]*:", target):
+                      continue
+                  target = urllib.parse.unquote(target.split("#", 1)[0])
+                  if not target:
+                      continue
+                  resolved = (file.parent / target).resolve()
+                  if not resolved.exists():
+                      failures.append(f"{file}: missing {target}")
+          if failures:
+              print("\n".join(failures))
+              sys.exit(1)
+          print(f"Validated local Markdown links in {len(files)} documents.")
+          PY
