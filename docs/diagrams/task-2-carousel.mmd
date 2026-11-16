@@ -1,0 +1,11 @@
+stateDiagram-v2
+    [*] --> Slide1
+    Slide1 --> Slide2: Next / indicator 2 / interval
+    Slide2 --> Slide3: Next / indicator 3 / interval
+    Slide3 --> Slide1: Next / indicator 1
+    Slide2 --> Slide1: Previous
+    Slide3 --> Slide2: Previous
+    note right of Slide1
+      Initial active slide
+      Task 2 uses Bootstrap carousel JS
+    end note
