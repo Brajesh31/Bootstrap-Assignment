@@ -37,3 +37,10 @@ Update diagrams in the same change as the HTML they describe.
 ## Extra diagram usage
 
 When adding a new task, include a page-flow diagram only when there is a distinct user journey. Keep source labels consistent with HTML IDs and Bootstrap target selectors. Do not draw database tables or REST endpoints for a static UI exercise.
+
+## Validation reminders
+
+- Keep exactly one initial active carousel slide in the Task 2 model.
+- Keep the modal target `#exampleModal` aligned with the HTML.
+- Keep the carousel target `#carouselExampleDark` aligned with the HTML.
+- Distinguish Bootstrap component behavior from custom backend behavior.
