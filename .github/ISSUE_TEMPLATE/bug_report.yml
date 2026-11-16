@@ -1,0 +1,55 @@
+name: "🐛 Bug report"
+description: Report a reproducible issue in one of the Bootstrap exercises.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "Thank you for improving this assignment. Do not include passwords, tokens, or private information."
+  - type: dropdown
+    id: task
+    attributes:
+      label: Affected task
+      options:
+        - Task 1 - Course card
+        - Task 2 - Carousel
+        - Task 3 - Navigation and modal
+        - Documentation or repository
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the observed issue.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open ...
+        2. Click ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+  - type: input
+    id: viewport
+    attributes:
+      label: Viewport dimensions/device
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sanitized screenshot or console output
+      description: Remove personal information and secrets.
