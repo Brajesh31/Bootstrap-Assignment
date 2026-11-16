@@ -1,0 +1,79 @@
+name: 🧪 Static HTML checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  static-validation:
+    name: Validate HTML and referenced local assets
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate task pages and local image paths
+        run: |
+          python3 <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          import sys
+
+          root = Path("Assignment_14_Bootstrap")
+          pages = [root / "Task_1.html", root / "Task_2.html", root / "Task_3.html"]
+          errors = []
+
+          class PageParser(HTMLParser):
+              def __init__(self, source):
+                  super().__init__(convert_charrefs=True)
+                  self.source = source
+              def handle_starttag(self, tag, attrs):
+                  attrs = dict(attrs)
+                  if tag == "img":
+                      alt = attrs.get("alt")
+                      if alt is None:
+                          errors.append(f"{self.source}: image missing alt attribute")
+                  for key in ("src", "href"):
+                      value = attrs.get(key)
+                      if not value or value.startswith(("http://", "https://", "#", "mailto:", "tel:", "data:")):
+                          continue
+                      if value.startswith("javascript:"):
+                          errors.append(f"{self.source}: javascript: URL is not allowed")
+                          continue
+                      target = (root / value.split("#", 1)[0].split("?", 1)[0]).resolve()
+                      if not target.exists():
+                          errors.append(f"{self.source}: missing local {key} target: {value}")
+
+          for page in pages:
+              if not page.is_file():
+                  errors.append(f"Missing required page: {page}")
+                  continue
+              parser = PageParser(page.as_posix())
+              try:
+                  parser.feed(page.read_text(encoding="utf-8"))
+                  parser.close()
+              except Exception as exc:
+                  errors.append(f"{page}: HTML parsing error: {exc}")
+
+          if errors:
+              print("\n".join(errors))
+              sys.exit(1)
+          print(f"Checked {len(pages)} task pages and their local assets.")
+          PY
+
+      - name: Verify repository documentation entry points
+        run: |
+          test -s README.md
+          test -s docs/README.md
+          test -s docs/architecture.md
+          test -s docs/testing.md
+          test -s docs/security.md
+          test -s docs/diagrams/README.md
+          test -s docs/adr/README.md
+          test -s docs/runbooks/README.md
