@@ -2,7 +2,7 @@
 
 ## 1. Purpose
 
-This document explains the existing visual assets and how they are used. It does not claim ownership or license rights for images whose provenance is not recorded.
+This document explains the existing visual assets and their use. It does not claim ownership or license rights for images whose provenance is not recorded.
 
 ## 2. Existing media assets
 
@@ -18,40 +18,27 @@ This document explains the existing visual assets and how they are used. It does
 
 | File | Purpose |
 |---|---|
-| `output/task_1.png` | Saved example render for Task 1 |
-| `output/task_2.png` | Saved example render for Task 2 |
-| `output/task_3_a.png` | Saved example render for Task 3 |
-| `output/task_3_b.png` | Additional saved example render for Task 3 |
+| `output/task_1.png` | Saved Task 1 example render |
+| `output/task_2.png` | Saved Task 2 example render |
+| `output/task_3_a.png` | Saved Task 3 example render |
+| `output/task_3_b.png` | Additional Task 3 example render |
 
-These are reference renders. The HTML pages do not load files from the output directory.
+These are reference renders. The task HTML files do not load images from the output directory.
 
-## 4. Image path convention
+## 4. Relative path convention
 
-The HTML files and `media/` folder are siblings. Image sources use relative paths such as:
+The task HTML files and `media/` directory are siblings. Image sources use relative paths such as:
 
 ```html
 <img src="media/example.png" alt="Accurate image description">
 ```
 
-If a task page is moved, its relative image paths must be updated or the folder layout preserved.
+If a task page is moved, its relative image paths must be updated or the folder structure preserved.
 
-## 5. Provenance and licensing workflow
+## 5. Provenance and licensing
 
-Before adding or redistributing an image, record:
-- Filename and purpose.
-- Original source URL or creator.
-- Copyright owner.
-- License or written permission.
-- Required attribution.
-- Date and person who verified permission.
-
-The root MIT license covers the repository code according to its terms. It does not automatically provide permission to redistribute every image in media/.
+Before adding or redistributing an image, record its filename, purpose, original source/creator, copyright owner, license or permission, attribution requirements, and verification date. The root MIT license applies to project code according to its terms; it does not automatically permit redistribution of every image in `media/`.
 
 ## 6. Quality requirements
 
-- Use descriptive alt text for meaningful images.
-- Use empty alt text for purely decorative images.
-- Optimize images to reasonable rendered dimensions.
-- Preserve aspect ratio.
-- Avoid embedding credentials, personal data, or private screenshots.
-- Keep genuine application screenshots separate from illustrative mockups.
+Use meaningful alt text for informative images, empty alt text for decorative images, optimize file sizes, preserve aspect ratio, and avoid private data in screenshots.
