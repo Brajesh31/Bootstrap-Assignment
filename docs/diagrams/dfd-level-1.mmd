@@ -1,0 +1,17 @@
+flowchart TD
+    Visitor[Visitor]
+    Pages((1.0 Serve static HTML))
+    Assets((2.0 Load page assets))
+    Render((3.0 Render components))
+    Interact((4.0 Bootstrap interactions))
+    Media[(Local media directory)]
+    CDN[(Bootstrap CDN)]
+    Visitor --> Pages
+    Pages --> Assets
+    Media --> Assets
+    CDN --> Assets
+    Assets --> Render
+    Render --> Interact
+    Visitor -->|Carousel, dropdown and modal actions| Interact
+    Interact -->|Temporary browser state| Render
+    Interact -.-> Missing[No authentication or enrollment data store]
