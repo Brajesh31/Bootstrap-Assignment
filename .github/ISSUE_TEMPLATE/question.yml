@@ -1,0 +1,46 @@
+name: "❓ Question or usage help"
+description: "Ask a non-sensitive question about running or understanding the Bootstrap exercises."
+title: "[Question]: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for checking the project. Search existing issues and the documentation first.
+        Never include passwords, tokens, private data, or real credentials.
+  - type: dropdown
+    id: task
+    attributes:
+      label: "Which exercise is this about?"
+      options:
+        - Task 1 - Course card
+        - Task 2 - Image carousel
+        - Task 3 - Navigation and login modal
+        - Documentation or repository setup
+        - General
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: "Your question"
+      description: "Explain what you expected and what you are seeing."
+      placeholder: "I expected ... but instead ..."
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Steps already tried"
+      description: "Include browser, operating system, and exact steps where relevant."
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: "Before submitting"
+      options:
+        - label: "I checked the README and relevant documentation."
+          required: true
+        - label: "I removed credentials and private information from this report."
+          required: true
