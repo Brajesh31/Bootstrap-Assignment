@@ -1,23 +1,36 @@
-# Support
+# 🆘 Support
 
-## Questions and help
+## 1. Project support scope
 
-Use the repository's GitHub Issues page for reproducible questions and defects: https://github.com/Brajesh31/Bootstrap-Assignment/issues. Search existing discussions first and include the affected page, browser, what you expected, what happened, and the steps needed to reproduce the issue.
+This is a small educational Bootstrap repository. It demonstrates three static HTML exercises and does not provide a live course, account, enrollment, login or support service.
 
-This project is a static HTML assignment. It has no account service, API, backend, database, or real enrollment/login feature. Do not include real passwords, private information, or credentials in examples or reports.
+## 2. Before opening an issue
 
-## Bug reports
+1. Read the [README](README.md).
+2. Follow the [Installation Guide](docs/installation.md).
+3. Check the [FAQ](docs/faq.md) and [Troubleshooting Guide](docs/troubleshooting.md).
+4. Search for an existing issue before creating a duplicate.
 
-For a visual or behavior issue, identify Task_1.html, Task_2.html, or Task_3.html and say whether the Bootstrap CDN assets loaded. Include a screenshot when it helps, but remove personal or unrelated information. For asset problems, mention the relative file path and whether the original media file is present.
+## 3. What to include in a support request
 
-## Feature requests
+- Task page: Task 1, Task 2 or Task 3.
+- Browser and version.
+- Operating system.
+- Approximate viewport size.
+- Steps to reproduce.
+- Expected and observed behavior.
+- Whether Bootstrap CDN requests succeeded.
+- Sanitized console/network output.
+- Genuine screenshot when it helps explain a visual issue.
 
-Describe the user problem and the expected page behavior. Requests that add server-side functionality, collect credentials, or redistribute third-party media need an explicit design and rights review.
+## 4. What not to share
 
-## Security reports
+Do not post real passwords, API keys, access tokens, private personal data, or confidential information. The login modal is only a UI exercise.
 
-Do not disclose suspected vulnerabilities in a public issue. Follow the private reporting steps in SECURITY.md.
+## 5. Security reports
 
-## Support expectations
+Do not report vulnerabilities publicly. Follow the private reporting procedure in [SECURITY.md](SECURITY.md).
 
-This is a small educational repository without paid support, a service-level commitment, or a guaranteed maintenance schedule. The repository owner prioritizes work at their discretion.
+## 6. Support expectations
+
+There is no paid support, guaranteed response window, or service-level commitment. The repository is maintained on a best-effort basis.
