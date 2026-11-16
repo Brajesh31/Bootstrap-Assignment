@@ -1,32 +1,54 @@
-# Architecture
+# 🏗️ Architecture
 
-## Overview
+## 1. Overview
 
-Bootstrap Assignment is a static website exercise. Each HTML document is a separate page; the browser parses the page, loads its local images, and fetches Bootstrap CSS and JavaScript from jsDelivr. There is no build pipeline, app framework, application server, persistent data store, or API.
+Bootstrap Assignment is a static multi-page demonstration. Each task is an independent HTML page. The browser parses the page, requests its local media, and fetches Bootstrap 5.3.2 CSS and JavaScript from jsDelivr.
 
-~~~text
-Browser
-  ├── Task_1.html: course card
-  ├── Task_2.html: image carousel
-  └── Task_3.html: navigation, dropdown, login modal
-       ├── media/: local image assets
-       └── jsDelivr: Bootstrap 5.3.2 CSS and JavaScript bundle
-~~~
+No application framework, bundler, server, database, or project-authored application JavaScript is present.
 
-## Pages and components
+## 2. High-level architecture
 
-- Task_1.html contains a Bootstrap card with a local course image, title, descriptive text, and an Enroll Now anchor. The anchor currently points to # and does not enroll a user.
-- Task_2.html contains a dark carousel with three local images, three indicators, timed slides, and previous/next controls. Bootstrap's JavaScript bundle provides the interaction.
-- Task_3.html contains a tab-style navigation list, a local logo, a Courses dropdown, two placeholder navigation links, and a button that opens a Bootstrap modal. The modal form shows email and password fields but has no submission handler or authentication service.
+```mermaid
+flowchart TB
+    Repo[Git repository]
+    Repo --> T1[Task_1.html]
+    Repo --> T2[Task_2.html]
+    Repo --> T3[Task_3.html]
+    Repo --> Media[Local media assets]
+    T1 --> Browser[Visitor browser]
+    T2 --> Browser
+    T3 --> Browser
+    Media --> Browser
+    CDN[Bootstrap 5.3.2 on jsDelivr] -->|CSS and JS bundle| Browser
+    Browser --> UI[Rendered Bootstrap components]
+```
 
-All image paths are relative to the HTML files and point into media/. The output/ directory contains saved rendered examples; the pages do not load those output files.
+## 3. Page responsibility boundaries
 
-## Dependencies and runtime
+| Page | Main structure | Bootstrap behavior |
+|---|---|---|
+| Task 1 | Course card | CSS styling and utility classes |
+| Task 2 | Three-image carousel | Bootstrap carousel JavaScript |
+| Task 3 | Navigation and modal | Dropdown and modal JavaScript |
 
-Bootstrap CSS and the Bootstrap JavaScript bundle are versioned at 5.3.2 and loaded from jsDelivr with subresource integrity and crossorigin metadata. No local Bootstrap copy is included. Interactive dropdown, carousel, and modal features depend on loading the JavaScript bundle. Styling and those interactions can fail if the CDN is unavailable.
+## 4. Browser component lifecycle
 
-The HTML can be opened directly with a browser or served by any static file server. The static server's document root should be the Assignment_14_Bootstrap directory if the task pages are to be served at its root. The repository root itself has no index page.
+The browser downloads HTML and referenced assets, builds the DOM, applies Bootstrap CSS, and activates Bootstrap data-API behavior for supported components when the JavaScript bundle is available.
 
-## Boundaries
+Task 1 does not require Bootstrap JavaScript for the card. Task 2 depends on the carousel plugin. Task 3 depends on dropdown and modal plugins.
 
-There are no network calls from project-authored application code, no form submission, and no account or enrollment backend. The remote CDN requests are the only required runtime network dependency described by the markup. Media ownership and reuse permissions are not recorded in the source; check them before redistribution.
+## 5. External dependency
+
+The pages use Bootstrap 5.3.2 via jsDelivr. Each page contains integrity and crossorigin attributes. Any version change must update CSS and JavaScript consistently and use integrity values generated for the exact files.
+
+## 6. Asset paths
+
+The `media/` directory is a sibling of the task pages. Relative paths such as `media/filename` are resolved from the HTML page URL. Moving a page without its media directory breaks its images.
+
+## 7. Security and privacy boundary
+
+The browser code is public. The login fields are visual form controls only. They are not transmitted to an authentication service or persisted by the project. Do not enter real passwords.
+
+## 8. Design constraints
+
+Preserve the independent exercise structure unless there is a clear reason to introduce shared templates or a build step. Keep the assignment easy to open, inspect, and understand. Avoid creating server or database architecture for systems not in the repository.
