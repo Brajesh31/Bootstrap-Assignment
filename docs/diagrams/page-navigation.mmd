@@ -1,0 +1,13 @@
+flowchart TD
+    Start([Open repository]) --> Choose{Choose exercise}
+    Choose --> T1[Task 1: Course card]
+    Choose --> T2[Task 2: Image carousel]
+    Choose --> T3[Task 3: Navigation and modal]
+    T1 --> Link[Enroll Now placeholder]
+    T2 --> Slides[Indicators and Previous/Next]
+    T3 --> Dropdown[Courses dropdown]
+    T3 --> Modal[Login modal]
+    Link --> End([End: no enrollment service])
+    Slides --> End
+    Dropdown --> End
+    Modal --> End
