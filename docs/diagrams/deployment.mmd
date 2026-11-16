@@ -1,0 +1,10 @@
+flowchart TD
+    Source[Reviewed HTML and media files] --> Root{Choose document root}
+    Root -->|Assignment_14_Bootstrap| TaskPages[Task pages at host root]
+    Root -->|Repository root| Nested[Task pages remain nested]
+    TaskPages --> Publish[Static HTTPS host]
+    Nested --> Publish
+    Publish --> Check[Verify HTML, media and CDN]
+    Check --> Success([Published static exercise])
+    Check -->|Failure| Fix[Correct paths or host settings]
+    Fix --> Publish
