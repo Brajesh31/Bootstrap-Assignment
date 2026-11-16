@@ -19,6 +19,10 @@ Welcome to the full documentation for the three Bootstrap 5.3.2 HTML exercises i
 | [Project overview](project-overview.md) | Purpose, audience, learning objectives and non-goals |
 | [Features](features.md) | Task 1 card, Task 2 carousel, Task 3 navigation/modal |
 | [Usage](usage.md) | How to interact with each page |
+| [Coding standards](coding-standards.md) | HTML, Bootstrap, images and documentation conventions |
+| [Maintenance](maintenance.md) | Routine upkeep |
+| [Release process](release-process.md) | Pre-release and rollback checklist |
+| [Observability](observability.md) | Static-host monitoring considerations |
 | [Project structure](project-structure.md) | Directory tree and file responsibilities |
 | [Architecture](architecture.md) | Static HTML, CDN and browser model |
 | [System design](system-design.md) | Component boundaries and trust model |
