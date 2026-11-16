@@ -1,0 +1,28 @@
+title: "❔ [Q&A]: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ask a question about the existing source or documented behavior. For reproducible defects, open a Bug Report instead.
+  - type: textarea
+    id: context
+    attributes:
+      label: "Context"
+      description: "Which page, component, or documentation section are you referring to?"
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: "Question"
+      placeholder: "What would you like clarified?"
+    validations:
+      required: true
+  - type: textarea
+    id: research
+    attributes:
+      label: "What have you checked?"
+      description: "Name the relevant guide, source file, or browser behavior."
+    validations:
+      required: false
