@@ -1,0 +1,12 @@
+flowchart TD
+    Start([Start manual QA]) --> Load[Open each Task page]
+    Load --> Assets[Check local images and CDN assets]
+    Assets --> UI{Component page?}
+    UI -->|Task 1| Card[Inspect card and placeholder CTA]
+    UI -->|Task 2| Carousel[Test indicators and previous/next]
+    UI -->|Task 3| Modal[Test dropdown and modal]
+    Card --> A11y[Keyboard, focus, alt text and responsive check]
+    Carousel --> A11y
+    Modal --> A11y
+    A11y --> Record[Record actual browser and results]
+    Record --> End([Review complete])
