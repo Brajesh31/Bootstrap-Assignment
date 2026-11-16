@@ -1,0 +1,19 @@
+flowchart TB
+    subgraph Task1["Task 1"]
+        Card[Card]
+        Card --> Image1[Card image]
+        Card --> Body[Title, text and CTA]
+    end
+    subgraph Task2["Task 2"]
+        Carousel[Carousel]
+        Carousel --> Indicators[Indicators]
+        Carousel --> Slides[Three slide items]
+        Carousel --> Controls[Previous and next]
+    end
+    subgraph Task3["Task 3"]
+        Nav[Navigation]
+        Nav --> Dropdown[Courses dropdown]
+        Nav --> Login[Login trigger]
+        Login --> Modal[Login modal]
+        Modal --> Form[Presentation-only fields]
+    end
