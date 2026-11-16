@@ -1,0 +1,35 @@
+title: "💡 [Idea]: "
+labels: ["enhancement", "discussion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for ideas and proposed improvements. This repository is a small static Bootstrap learning project, so explain how the idea supports that scope.
+  - type: textarea
+    id: problem
+    attributes:
+      label: "What problem or learning gap would this address?"
+      placeholder: "Describe the current limitation or opportunity."
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: "Proposed improvement"
+      placeholder: "Describe the smallest useful change."
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: "Expected impact and trade-offs"
+      description: "Mention accessibility, responsiveness, dependencies, maintenance, and whether the change adds a backend."
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: "Scope check"
+      options:
+        - label: "I understand that the current project has no backend, database, or real authentication."
+          required: true
