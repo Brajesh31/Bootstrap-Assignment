@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "🔐 Report a security vulnerability"
+    url: https://github.com/Brajesh31/Bootstrap-Assignment/security/advisories/new
+    about: Use private vulnerability reporting. Do not publish exploit details or credentials in public issues.
+  - name: "💬 Support and questions"
+    url: https://github.com/Brajesh31/Bootstrap-Assignment/issues
+    about: Use GitHub issues for non-sensitive project questions.
