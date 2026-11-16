@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-labelledby="title desc">
+<title id="title">Bootstrap Assignment</title><desc id="desc">A purple gradient banner describing three Bootstrap interface exercises.</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#160d28"/><stop offset=".6" stop-color="#40217c"/><stop offset="1" stop-color="#7952b3"/></linearGradient><linearGradient id="a"><stop stop-color="#a78bfa"/><stop offset="1" stop-color="#67e8f9"/></linearGradient></defs>
+<rect width="1280" height="360" rx="28" fill="url(#bg)"/>
+<g fill="none" stroke="url(#a)" stroke-width="3" opacity=".7"><rect x="880" y="60" width="125" height="90" rx="10"/><rect x="1035" y="60" width="155" height="90" rx="10"/><rect x="880" y="178" width="310" height="105" rx="12"/><path d="M1005 105h30M950 150v28M1110 150v28"/></g>
+<g fill="#e9d5ff"><circle cx="910" cy="86" r="7"/><circle cx="1065" cy="86" r="7"/><circle cx="910" cy="204" r="7"/></g>
+<g font-family="Inter,Segoe UI,Arial,sans-serif"><text x="90" y="142" fill="#fff" font-size="62" font-weight="750">Bootstrap Assignment</text><rect x="92" y="168" width="120" height="5" rx="3" fill="url(#a)"/><text x="92" y="220" fill="#eee7ff" font-size="28">Three practical UI exercises</text><text x="92" y="270" fill="#c4b5fd" font-size="17" letter-spacing="2">CARDS · CAROUSELS · NAVIGATION · MODALS</text></g>
+</svg>
