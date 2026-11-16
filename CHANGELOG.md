@@ -1,20 +1,26 @@
-# Changelog
+# 📜 Changelog
 
-This file records notable repository changes. No tagged release history is documented; prior changes are not reconstructed.
+This file records notable repository changes. No tagged release history is assumed.
 
 ## [Unreleased]
 
-### Added
+### 📚 Documentation added
+- Comprehensive project overview and task-specific feature catalogue.
+- Installation, configuration, usage, architecture, system design, data-flow and component guides.
+- Accessibility, responsive design, performance, privacy and security guidance.
+- Testing, troubleshooting, maintenance, deployment and release procedures.
+- Asset inventory and provenance guidance.
+- Glossary and official reference catalogue.
 
-- Project overview and instructions for previewing the three static Bootstrap exercises.
-- Contribution, conduct, security, support, and roadmap guidance.
-- Architecture, installation, development, deployment, route, data, troubleshooting, and FAQ documentation.
-- MIT license attribution and citation metadata.
-- Repository ownership and editor, Git, and environment-example configuration.
+### 🗺️ Engineering resources added
+- Editable Mermaid architecture, page navigation, component, DFD, deployment and test workflow diagrams.
+- Architecture Decision Records (ADRs).
+- Operational runbooks for local preview, asset verification and static publishing.
+- GitHub issue forms, pull request guidance and repository workflows.
 
-### Clarified
-
-- The course enrollment link and navigation links are placeholders.
-- The login modal is a visual example and does not submit credentials or authenticate users.
-- The exercises rely on Bootstrap 5.3.2 assets loaded from jsDelivr.
-- The source-code license does not establish reuse rights for image assets.
+### 🔎 Clarifications
+- The login modal is a visual example, not authentication.
+- The Enroll Now link and placeholder navigation items do not connect to services.
+- No API, backend, database, enrollment, account or payment system exists in the current project.
+- Bootstrap 5.3.2 is loaded from jsDelivr with SRI metadata.
+- The MIT source-code license does not automatically cover third-party image assets.
