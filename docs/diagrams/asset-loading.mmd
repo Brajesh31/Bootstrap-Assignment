@@ -1,0 +1,13 @@
+sequenceDiagram
+    participant Visitor
+    participant Browser
+    participant Repo as Static file host
+    participant CDN as jsDelivr
+    Visitor->>Browser: Open Task HTML
+    Browser->>Repo: Request HTML
+    Repo-->>Browser: Return page markup
+    Browser->>Repo: Request local media file
+    Repo-->>Browser: Return image
+    Browser->>CDN: Request Bootstrap CSS and JS
+    CDN-->>Browser: Return framework assets
+    Browser->>Browser: Render Bootstrap UI
