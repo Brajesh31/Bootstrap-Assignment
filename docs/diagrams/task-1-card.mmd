@@ -1,0 +1,8 @@
+flowchart TD
+    Visitor([Visitor opens Task 1]) --> HTML[Load course card HTML]
+    HTML --> Image[Load local course image]
+    HTML --> Card[Render title and description]
+    Card --> CTA[Display Enroll Now link]
+    CTA --> Destination{Destination configured?}
+    Destination -->|Current source: href #| Placeholder[No enrollment workflow]
+    Destination -->|Future implementation| Registration[Approved registration service]
