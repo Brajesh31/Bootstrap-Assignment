@@ -1,21 +1,55 @@
-# Security Policy
+# 🔐 Security Policy
 
-## Scope
+## 1. Project scope
 
-This repository is a static front-end exercise. It has no server-side application, API, database, account system, or real authentication flow. The login dialog is a visual demonstration only and must not be used to collect actual passwords. Reports about the example pages, repository dependencies, or unsafe changes to the project are in scope.
+Bootstrap Assignment is a static front-end learning project. It contains HTML pages, local media, and Bootstrap 5.3.2 resources loaded from jsDelivr.
 
-## Supported versions
+It does **not** contain a server-side application, API, database, account service, or real authentication flow. The Task 3 login dialog is a visual demonstration only.
 
-Security fixes are considered for the latest state of the main branch. No older release or deployed service is maintained under this policy.
+## 2. Supported versions
 
-## Reporting a vulnerability
+Security fixes and repository-level changes are considered for the latest state of the `main` branch. No older deployed service or release line is maintained under this policy.
 
-Please do not publish suspected vulnerabilities in a public issue or pull request. Use GitHub's private vulnerability reporting for this repository if it is enabled: https://github.com/Brajesh31/Bootstrap-Assignment/security/advisories/new. If private reporting is unavailable, contact @brajesh31 through a private channel listed on the GitHub profile.
+## 3. Reporting a vulnerability
 
-Include the affected file or page, browser and relevant environment, the impact, and steps to reproduce safely. Redact credentials, personal information, and unrelated sensitive data. Do not probe systems or services that you do not own.
+Please do not publish suspected vulnerabilities in a public issue or pull request.
 
-The maintainer will acknowledge reports as reasonably possible, investigate, and coordinate any fix and disclosure with the reporter. There is no guaranteed response time or formal service-level agreement.
+Use GitHub's private vulnerability reporting for this repository when enabled:
 
-## Safe use
+[Report a private vulnerability](https://github.com/Brajesh31/Bootstrap-Assignment/security/advisories/new)
 
-The Bootstrap CSS and JavaScript are loaded from jsDelivr with integrity metadata. Keep the integrity value aligned with the exact upstream asset version when changing CDN URLs. Review external resources and contributed images before adding them. Never treat the demo form as a secure login.
+If private reporting is unavailable, contact the repository owner through the private channel listed on the GitHub profile.
+
+Include:
+- Affected file, page, dependency or workflow.
+- Impact and preconditions.
+- Steps to reproduce safely.
+- Browser and relevant environment.
+- Suggested mitigation, if known.
+
+Redact credentials, personal information, tokens and unrelated sensitive data. Do not probe systems you do not own.
+
+## 4. Response expectations
+
+The project is maintained on a best-effort basis. The maintainer will assess reports, ask for clarification when needed, and coordinate fixes or disclosure. No response-time SLA is promised.
+
+## 5. Safe use of the current demo
+
+- Never enter real passwords in the login modal.
+- Do not describe the modal as an authentication system.
+- Do not place API keys, tokens or credentials in public HTML.
+- Do not add form submission or tracking without an explicit privacy and security review.
+- Verify asset provenance before distribution.
+
+## 6. CDN security
+
+Bootstrap CSS and JavaScript are loaded from jsDelivr with integrity metadata. When changing a URL or version:
+1. Use official upstream files.
+2. Obtain the SRI hash for the exact file.
+3. Keep CSS and JavaScript versions aligned.
+4. Confirm the browser reports no integrity error.
+5. Review the upstream release notes.
+
+## 7. Future authentication
+
+If real authentication or enrollment is introduced, it needs a separately designed server-side service, secure password handling, session management, rate limiting, abuse protection, privacy disclosures, retention/deletion policy, monitoring and incident response. Client-side HTML alone cannot securely authenticate users.
