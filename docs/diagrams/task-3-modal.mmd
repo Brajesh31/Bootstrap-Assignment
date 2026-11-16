@@ -1,0 +1,10 @@
+flowchart TD
+    Open([Open Task 3]) --> Nav[Render navigation]
+    Nav --> Course[Activate Courses dropdown]
+    Course --> Menu[Show placeholder menu options]
+    Nav --> Login[Activate Login]
+    Login --> Modal[Open Bootstrap modal]
+    Modal --> Inputs[Show email and password inputs]
+    Inputs --> Action[Click Login button]
+    Action --> Boundary[No submit handler or authentication API]
+    Modal --> Close[Close modal]
