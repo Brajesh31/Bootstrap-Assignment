@@ -5,8 +5,17 @@
 ```text
 Bootstrap-Assignment/
 ├── .github/
-│   └── workflows/
-│       └── update-readme.yml
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.yml
+│   │   ├── config.yml
+│   │   ├── documentation.yml
+│   │   └── feature_request.yml
+│   ├── workflows/
+│   │   ├── ci.yml
+│   │   ├── documentation.yml
+│   │   ├── security.yml
+│   │   └── update-readme.yml
+│   └── PULL_REQUEST_TEMPLATE.md
 ├── Assignment_14_Bootstrap/
 │   ├── Task_1.html
 │   ├── Task_2.html
@@ -22,21 +31,79 @@ Bootstrap-Assignment/
 │       ├── task_2.png
 │       ├── task_3_a.png
 │       └── task_3_b.png
+├── assets/
+│   └── bootstrap-assignment-banner.svg
 ├── docs/
 │   ├── adr/
+│   │   ├── 0001-static-pages.md
+│   │   ├── 0002-bootstrap-cdn.md
+│   │   ├── 0003-no-authentication.md
+│   │   └── README.md
 │   ├── diagrams/
+│   │   ├── README.md
+│   │   ├── asset-loading.mmd
+│   │   ├── component-map.mmd
+│   │   ├── deployment.mmd
+│   │   ├── dfd-level-0.mmd
+│   │   ├── dfd-level-1.mmd
+│   │   ├── page-navigation.mmd
+│   │   ├── system-context.mmd
+│   │   ├── task-1-card.mmd
+│   │   ├── task-2-carousel.mmd
+│   │   ├── task-3-modal.mmd
+│   │   └── test-workflow.mmd
 │   ├── runbooks/
-│   └── project and engineering guides
+│   │   ├── README.md
+│   │   ├── asset-verification.md
+│   │   ├── local-preview.md
+│   │   └── static-publishing.md
+│   ├── accessibility.md
+│   ├── api.md
+│   ├── architecture.md
+│   ├── assets.md
+│   ├── coding-standards.md
+│   ├── components.md
+│   ├── configuration.md
+│   ├── data-flow.md
+│   ├── database.md
+│   ├── deployment.md
+│   ├── development.md
+│   ├── faq.md
+│   ├── features.md
+│   ├── future-scope.md
+│   ├── glossary.md
+│   ├── installation.md
+│   ├── limitations.md
+│   ├── maintenance.md
+│   ├── modules.md
+│   ├── observability.md
+│   ├── performance.md
+│   ├── privacy.md
+│   ├── project-overview.md
+│   ├── project-structure.md
+│   ├── README.md
+│   ├── references.md
+│   ├── release-process.md
+│   ├── responsive-design.md
+│   ├── security.md
+│   ├── system-design.md
+│   ├── testing.md
+│   ├── troubleshooting.md
+│   └── usage.md
 ├── .editorconfig
 ├── .env.example
 ├── .gitattributes
 ├── .gitignore
+├── .idea/
+│   └── .gitignore
 ├── CHANGELOG.md
 ├── CITATION.cff
 ├── CODEOWNERS
 ├── CODE_OF_CONDUCT.md
 ├── CONTRIBUTING.md
+├── GOVERNANCE.md
 ├── LICENSE
+├── MAINTAINERS.md
 ├── README.md
 ├── ROADMAP.md
 ├── SECURITY.md
