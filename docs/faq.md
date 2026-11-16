@@ -1,37 +1,45 @@
-# Frequently asked questions
+# ❓ Frequently Asked Questions
 
-## What is this repository?
+## What does this repository contain?
 
-It is a small set of Bootstrap 5.3.2 HTML exercises: a course card, an image carousel, and a navigation bar with a dropdown and modal.
+Three standalone Bootstrap HTML exercises: a course card, an image carousel, and a navigation bar with dropdown and login modal.
 
-## How do I start it?
+## Which Bootstrap version is used?
 
-Open one of the three Task HTML pages in a browser. For a local HTTP preview, serve the Assignment_14_Bootstrap directory using Python's built-in static server. See installation.md for commands.
+The pages reference Bootstrap 5.3.2 CSS and JavaScript from jsDelivr.
 
-## Do I need Node.js or a build step?
+## Do I need Node.js or npm?
 
-No. The project has no package manifest or build pipeline. Bootstrap is loaded from jsDelivr at runtime.
+No. There is no package manifest or build step. A browser is enough to open the HTML files. Python can optionally serve them over HTTP.
 
-## Why does the project need internet access?
+## Why do some components fail without internet?
 
-The HTML references Bootstrap CSS and the JavaScript bundle from jsDelivr. The pages also use local images. The interactive carousel, dropdown, and modal need the Bootstrap bundle to load.
+Bootstrap CSS and JavaScript are loaded from jsDelivr. Without the CDN, styling and JavaScript-powered carousel, dropdown, and modal behavior may not work.
 
-## Does the login modal authenticate users?
+## Does Login authenticate a user?
 
-No. It only displays sample input fields and buttons. It has no server, submission handler, or credential storage. Never enter real passwords.
+No. It opens a presentation-only modal with email and password fields. It has no submit handler, API, or credential storage. Never enter real credentials.
 
-## Does Enroll Now register me for a course?
+## Does Enroll Now enroll a student?
 
-No. The link is a placeholder with a # destination.
+No. The anchor points to `#` and does not connect to an enrollment service.
 
-## Is there an API or database?
+## Is there a database?
 
-No. All content is static HTML and image files; there are no API endpoints, database, or persistent user records.
+No. The project is static HTML and local image files.
 
-## Can the images be reused under the MIT license?
+## What is the output directory?
 
-The MIT license covers the source code as stated in LICENSE. It does not establish image ownership or usage rights. Verify the rights and source of each image before reuse.
+It contains saved rendered examples. The HTML pages do not load those files at runtime.
 
-## Where can I ask questions or report issues?
+## Can I reuse the images under the MIT license?
 
-Use the repository's GitHub Issues page for ordinary questions and reproducible defects. For suspected security issues, follow SECURITY.md and report privately.
+The repository's MIT license does not automatically grant rights to third-party images. Verify the source and usage license of each image before redistribution.
+
+## How do I report a bug?
+
+Open a GitHub issue with the task page, browser, viewport, exact steps, expected behavior, observed behavior, and sanitized console output.
+
+## How do I report a vulnerability?
+
+Use the private process described in the root SECURITY.md. Do not publish secrets or exploit details in a public issue.
