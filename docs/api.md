@@ -1,21 +1,36 @@
-# Routes and interactions
+# 🔌 API and Browser Interface Reference
 
-## Server API
+## 1. Server API status
 
-There is no server-side API in this repository. The project consists of static HTML files and images. It defines no HTTP handlers, JSON endpoints, form submission targets, API authentication, or data contract.
+There is no application HTTP API in this repository. No routes, controllers, GraphQL schema, JSON service, API authentication, request validation, or server process is present.
 
-## Page entry points
+## 2. Static page catalogue
 
-| Page | Browser interaction |
-| --- | --- |
-| Assignment_14_Bootstrap/Task_1.html | Displays a course card. Enroll Now is an anchor with href="#"; it does not submit or navigate to an enrollment service. |
-| Assignment_14_Bootstrap/Task_2.html | Displays a three-image Bootstrap carousel with indicators and previous/next controls. Bootstrap's JavaScript bundle handles carousel behavior in the browser. |
-| Assignment_14_Bootstrap/Task_3.html | Displays navigation, a Courses dropdown, placeholder links, and a button that opens a login modal. |
+| Page | Main behavior | Data/network behavior |
+|---|---|---|
+| `Task_1.html` | Course card | Static HTML and local image; action link is `#` |
+| `Task_2.html` | Bootstrap carousel | Static HTML, local images, Bootstrap CDN plugin |
+| `Task_3.html` | Dropdown and login modal | Static HTML, Bootstrap CDN plugins; modal form has no handler |
 
-## Login modal
+## 3. Bootstrap component interfaces
 
-The modal contains email and password inputs for presentation. The form has no action URL, no submit event handler, and no backend. The Login footer button is not wired to authentication. Do not enter real credentials, and do not describe this example as a working login system.
+Bootstrap components are configured through documented data attributes rather than custom repository API functions.
 
-## Browser assets
+| Component | Attribute pattern | Target |
+|---|---|---|
+| Carousel | `data-bs-target`, `data-bs-slide`, `data-bs-slide-to` | `#carouselExampleDark` |
+| Dropdown | `data-bs-toggle="dropdown"` | Associated dropdown menu |
+| Modal | `data-bs-toggle="modal"`, `data-bs-target` | `#exampleModal` |
+| Modal dismissal | `data-bs-dismiss="modal"` | Current modal instance |
 
-Each page loads Bootstrap 5.3.2 from jsDelivr using CSS and JavaScript bundle URLs with integrity metadata. The HTML also loads images from the local media directory. These are static asset requests, not a project API.
+These are Bootstrap browser component interfaces. They are not project-owned server endpoints.
+
+## 4. Login form boundary
+
+The Task 3 modal contains email and password fields. The form has no action URL or submit handler; the footer Login control is not connected to authentication. It does not verify identity, create a session, transmit credentials, or persist account data.
+
+Never enter real credentials into this demonstration.
+
+## 5. Future API requirements
+
+If an actual login or enrollment service is added, document endpoint method/path, request and response schemas, authentication, authorization, rate limits, validation, error responses, logging, and personal-data handling. Keep secrets server-side and never call a privileged API directly from a public static page.
