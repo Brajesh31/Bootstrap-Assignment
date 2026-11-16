@@ -13,7 +13,6 @@
 > [!NOTE]
 > **Educational scope:** this is a static Bootstrap assignment. The Login modal is a UI demonstration, Enroll Now is a placeholder, and there is no authentication, enrollment API, database, or backend.
 
-
 A small collection of static HTML exercises built with Bootstrap 5.3.2. The project demonstrates a course card, an image carousel, and a navigation layout with a dropdown and login modal. It is an educational front-end sample, not a complete course platform or authentication application.
 
 ## 🎯 Learning Objectives
@@ -28,12 +27,12 @@ A small collection of static HTML exercises built with Bootstrap 5.3.2. The proj
 ## 🧭 Exercises
 
 | Page | Demonstration |
-| --- | --- |
+|---|---|
 | Assignment_14_Bootstrap/Task_1.html | A centered course card with an image, course description, and Enroll Now link. |
-| Assignment_14_Bootstrap/Task_2.html | A dark Bootstrap carousel with three local images, indicators, timed slides, and previous/next controls. |
-| Assignment_14_Bootstrap/Task_3.html | A Bootstrap tab-style navigation bar with a local logo, Courses dropdown, placeholder navigation links, and a login modal form. |
+| Assignment_14_Bootstrap/Task_2.html | A Bootstrap carousel with three local images, indicators, timed slides, and previous/next controls. |
+| Assignment_14_Bootstrap/Task_3.html | A navigation bar with a Courses dropdown, placeholder navigation links, and a login modal form. |
 
-The existing rendered examples are stored in Assignment_14_Bootstrap/output/. Images used by the pages are in Assignment_14_Bootstrap/media/. Keep the relative media paths intact when moving or publishing the HTML files.
+Saved example renders are stored in Assignment_14_Bootstrap/output/. Images used by the pages are in Assignment_14_Bootstrap/media/. Keep relative media paths intact when moving or publishing the HTML files.
 
 ## 🖼️ Existing Output Previews
 
@@ -63,10 +62,10 @@ flowchart LR
 
 No build step, package manager, or server-side runtime is required. Open any Task HTML file directly in a modern browser. For a local HTTP preview, run a static server from the exercise directory:
 
-~~~powershell
+```powershell
 cd Assignment_14_Bootstrap
 py -m http.server 8000
-~~~
+```
 
 Then open http://localhost:8000/Task_1.html, /Task_2.html, or /Task_3.html. If the py launcher is unavailable, use python -m http.server 8000.
 
@@ -74,21 +73,31 @@ The pages load Bootstrap CSS and the Bootstrap JavaScript bundle from jsDelivr. 
 
 ## 🗂️ Repository layout
 
-~~~text
-Assignment_14_Bootstrap/
-├── Task_1.html
-├── Task_2.html
-├── Task_3.html
-├── media/       # Images referenced by the pages
-└── output/      # Saved example renders
-docs/            # Project and contributor documentation
-~~~
+```text
+.
+├── .github/                  # Issue, PR, discussion and automation configuration
+├── Assignment_14_Bootstrap/
+│   ├── Task_1.html
+│   ├── Task_2.html
+│   ├── Task_3.html
+│   ├── media/                 # Images referenced by the pages
+│   └── output/                # Saved example renders
+├── assets/                    # Repository documentation artwork
+├── docs/                      # Guides, Mermaid diagrams, ADRs and runbooks
+├── CHANGELOG.md
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── LICENSE
+├── README.md
+├── ROADMAP.md
+└── SECURITY.md
+```
 
 ## ⚠️ Current scope and limitations
 
 This repository contains only static HTML and image assets. It has no JavaScript application code, API, database, environment configuration, user accounts, or real login/enrollment flow. The navigation links and Enroll Now link currently point to #. The login modal displays email and password fields, but it does not submit or authenticate credentials. Do not enter real credentials into this demo.
 
-Some image alt attributes are placeholders and should be replaced with meaningful descriptions if the pages are adapted for broader use. Image provenance and reuse permissions are not documented by the source files; verify them before redistributing the images. The MIT license applies to the project code and does not grant rights to third-party assets.
+Some image alt attributes may need improvement before wider use. Image provenance and reuse permissions are not fully recorded in the source files; verify them before redistributing the images. The MIT license applies to the project code and does not automatically cover third-party assets.
 
 ## 🔐 Security, Privacy and Accessibility
 
@@ -99,11 +108,11 @@ Some image alt attributes are placeholders and should be replaced with meaningfu
 - Verify image provenance and redistribution rights. The MIT source license does not automatically cover third-party media.
 - Add descriptive alt text, meaningful titles, keyboard access, visible focus and reduced-motion consideration before wider use.
 
-See [Security](SECURITY.md), [Privacy](docs/privacy.md), and [Accessibility](docs/accessibility.md).
+See [Security](SECURITY.md), [Privacy](docs/privacy.md), [Accessibility](docs/accessibility.md), and the [Asset Rights Register](docs/asset-rights-register.md).
 
-## 🧪 Testing
+## 🧪 Testing and quality
 
-There is no automated application test suite. Use [Testing Guide](docs/testing.md) to check local images, CDN requests, carousel controls, dropdown/modal behavior, keyboard access, and responsive layouts.
+The repository has automated static checks, documentation-link checks, and a repository secret-pattern scan. It does not currently have a browser-driven end-to-end test suite. Use the [Testing Guide](docs/testing.md), [Manual QA Matrix](docs/manual-qa-matrix.md), and [Browser Compatibility Guide](docs/browser-compatibility.md) for repeatable manual verification. A documented test case is not a pass until someone has performed it.
 
 ## 📚 Documentation
 
@@ -111,8 +120,8 @@ See the complete [Documentation Hub](docs/README.md) for project overview, archi
 
 ## 🤝 Contributing and support
 
-See [CONTRIBUTING.md](CONTRIBUTING.md), [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md), [SECURITY.md](SECURITY.md), and [SUPPORT.md](SUPPORT.md).
+See [CONTRIBUTING.md](CONTRIBUTING.md), [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md), [SECURITY.md](SECURITY.md), and [SUPPORT.md](SUPPORT.md). Use GitHub Discussions for ideas and Q&A when Discussions are enabled for this repository.
 
 ## 📜 License
 
-The project code is available under the MIT License. See LICENSE.
+The project code is available under the MIT License. See LICENSE. Third-party assets remain subject to their own license and permission terms.
