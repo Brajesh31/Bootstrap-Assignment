@@ -1,0 +1,6 @@
+flowchart LR
+    Visitor((Visitor)) -->|Page request| StaticSite((Bootstrap assignment site))
+    StaticSite -->|HTML pages and local media| Visitor
+    CDN((Bootstrap CDN)) -->|CSS and JS resources| Visitor
+    Visitor -->|Mouse/keyboard actions| StaticSite
+    StaticSite -.->|No form/API data processing| NoService[No application backend]
