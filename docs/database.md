@@ -1,17 +1,37 @@
-# Data and persistence
+# 🗄️ Database and Persistence
 
-## Database
+## 1. Current database status
 
-There is no database or persistence layer in this project. The pages do not read or write user records, courses, enrollments, or credentials. There are no server-side models, migration files, or database connection settings.
+No database or persistence mechanism is included in the repository. The HTML pages are static documents and do not store visitor records, course enrollments, login credentials, or carousel state beyond the temporary browser component state.
 
-## Form controls and sample content
+There are no:
+- Database servers or client libraries.
+- Tables, collections or schema definitions.
+- ORM models.
+- Migration scripts.
+- API endpoints that read or write records.
+- Backup or recovery jobs.
 
-Task_3.html contains email and password fields inside a modal for a visual UI example. The form does not submit data and has no authentication handler. Task_1.html shows sample course copy, but its action link is a placeholder and does not create an enrollment. The pages do not persist information between visits.
+## 2. Form fields are not a database
 
-## Static assets
+Task 3 displays email and password input fields in a modal. The form has no action URL or event handler. Values are not intentionally sent to an application backend by the project code and are not stored by a project database.
 
-Images referenced by the HTML pages live in Assignment_14_Bootstrap/media/. The output folder stores example renders. Neither directory is an application data store. The images' provenance and distribution terms are not recorded in the HTML.
+Task 1's Enroll Now link is a placeholder. It does not create an enrollment record.
 
-## Future data-backed behavior
+## 3. Static assets
 
-If the project grows to accept real registrations or credentials, design an appropriate server-side service, storage schema, access control, retention and deletion rules, and secure transport before collecting information. Never store secrets in the static pages or in .env.example. Review the license and privacy terms for any dataset or media before distributing it.
+Files in `media/` and `output/` are repository assets. They are not user records or application storage.
+
+## 4. Future data-backed behavior
+
+If this exercise is expanded into a real learning platform, the data design must be created before implementation. Requirements would include:
+- User and role model.
+- Course catalogue and enrollment lifecycle.
+- Authentication and authorization model.
+- Data minimization and privacy disclosures.
+- Password hashing and session security, if password authentication is selected.
+- Retention, deletion and export requirements.
+- Backups, restoration testing, and access auditing.
+- Secure migrations and least-privilege database access.
+
+Do not publish an ERD or database schema as current architecture until a real schema exists.
