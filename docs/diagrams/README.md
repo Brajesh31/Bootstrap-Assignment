@@ -33,3 +33,7 @@ The diagrams in this directory are editable Mermaid source files. They describe 
 No database ERD, API sequence for application endpoints, backend class diagram, or infrastructure topology is included because those systems do not exist in this repository. The login modal is not authentication and the CTA does not enroll a learner.
 
 Update diagrams in the same change as the HTML they describe.
+
+## Extra diagram usage
+
+When adding a new task, include a page-flow diagram only when there is a distinct user journey. Keep source labels consistent with HTML IDs and Bootstrap target selectors. Do not draw database tables or REST endpoints for a static UI exercise.
